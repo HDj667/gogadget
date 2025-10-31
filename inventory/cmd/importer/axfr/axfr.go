@@ -21,7 +21,7 @@ type HostEntry struct {
 func main() {
 	var err error
 	var (
-		dbPath = flag.String("db", "inventory.db", "Pfad zur SQLite Datenbank")
+		dbPath = flag.String("db", "ansible.db", "Pfad zur SQLite Datenbank")
 		wipe   = flag.Bool("wipe", false, "Bestehende Tabellen löschen und neu anlegen")
 	)
 	flag.Parse()

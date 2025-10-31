@@ -16,7 +16,7 @@ bin:
 	@mkdir -p bin
 
 
-bin/inventory: cmd/inventory/inventory.go bin
+bin/inventory: cmd/ansible bin
 	go build -o bin/inventory cmd/inventory/inventory.go
 
 bin/axfr: cmd/importer/axfr/axfr.go bin

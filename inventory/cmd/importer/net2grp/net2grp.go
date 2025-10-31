@@ -27,7 +27,7 @@ type host struct {
 
 func main() {
 	var (
-		dbPath  = flag.String("db", "inventory.db", "Pfad zur SQLite Datenbank")
+		dbPath  = flag.String("db", "ansible.db", "Pfad zur SQLite Datenbank")
 		file    = flag.String("file", "", "Pfad zur Datei mit 'IPv4-CIDR<space>Group Name' Zeilen")
 		verbose = flag.Bool("v", true, "Verbose Log")
 	)

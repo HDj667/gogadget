@@ -28,7 +28,7 @@ type Group struct {
 
 func main() {
 	var (
-		dbPath       = flag.String("db", "inventory.db", "Pfad zur SQLite Datenbank")
+		dbPath       = flag.String("db", "ansible.db", "Pfad zur SQLite Datenbank")
 		list         = flag.Bool("list", false, "Vollständiges Inventory ausgeben")
 		host         = flag.String("host", "", "Host-Variablen für einen Host ausgeben")
 		includeEmpty = flag.Bool("include-empty-groups", false, "Leere Gruppen mit ausgeben")
@@ -45,7 +45,7 @@ func main() {
 	switch {
 	case *list:
 		if err := outputList(db, *includeEmpty); err != nil {
-			log.Fatalf("ansible_inventory: %v", err)
+			log.Fatalf("ansible: %v", err)
 		}
 	case *host != "":
 		hv, err := getHostVars(db, *host)

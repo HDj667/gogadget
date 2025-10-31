@@ -7,11 +7,11 @@ Tools:
 ## Inventory erstellen aus Daten von einem AXFR
 Beispiel:
 ```bash
-dig @ns.example.tld example.tld AXFR | ./axfr2sqlite -db inventory.db -wipe
+dig @ns.example.tld example.tld AXFR | ./axfr2sqlite -db ansible.db -wipe
 ```
 
 ## Inventory ausgeben im Ansible-Format
 ```bash
-./ansible_inventory --db inventory.db --list
+./ansible --db ansible.db --list
 ```
 
